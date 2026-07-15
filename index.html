@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hariprasath R N | Personal Portfolio. Software Engineer, Java Developer, and IT Student. Passionate about scalable software solutions, DSA, and Full Stack Development.">
+    <meta name="keywords" content="Hariprasath R N, Software Engineer, Java Developer, Portfolio, DSA, Full Stack, Nandha Engineering College">
+    <meta name="author" content="Hariprasath R N">
+    
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:title" content="Hariprasath R N | Software Engineer Portfolio">
+    <meta property="og:description" content="Explore projects, skills, and achievements of Hariprasath R N, a passionate Software Engineer and Java Developer.">
+    <meta property="og:type" content="website">
+    
+    <title>Hariprasath R N | Software Engineer & Java Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styling -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Canvas Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <!-- Sticky Navbar -->
+    <header class="navbar-container">
+        <div class="navbar-wrapper">
+            <a href="#home" class="logo">
+                <span class="logo-accent">H</span><span class="logo-text">RN</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#resume" class="nav-link">Resume</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-nav">Hire Me</a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="section-container hero-grid">
+                <div class="hero-content reveal">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Available for Opportunities</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="hero-greeting">Hi, I'm</span><br>
+                        <span class="hero-name-highlight">HARIPRASATH R N</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Software Engineer | Java Developer | IT Student</h2>
+                    <p class="hero-desc">
+                        Passionate about building scalable software solutions and continuously improving problem-solving skills through Java, Data Structures, and Full Stack Development.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </a>
+                        <a href="#resume" class="btn btn-secondary">
+                            <span>Download Resume</span>
+                            <i data-lucide="download" class="btn-icon"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Contact Me</span>
+                            <i data-lucide="mail" class="btn-icon"></i>
+                        </a>
+                    </div>
+                    <!-- Quick Stats Banner -->
+                    <div class="hero-quick-stats">
+                        <div class="stat-item">
+                            <span class="stat-num counter" data-target="500">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">LeetCode Solved</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num counter" data-target="15">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num counter" data-target="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right coding illustration -->
+                <div class="hero-illustration reveal">
+                    <div class="ide-mockup glass-card">
+                        <div class="ide-header">
+                            <div class="ide-controls">
+                                <span class="control red"></span>
+                                <span class="control yellow"></span>
+                                <span class="control green"></span>
+                            </div>
+                            <div class="ide-tab">
+                                <i data-lucide="coffee" class="ide-tab-icon"></i>
+                                <span>BinarySearch.java</span>
+                            </div>
+                        </div>
+                        <div class="ide-body">
+                            <pre><code class="language-java"><span class="line-num">1</span><span class="keyword">public class</span> <span class="class-name">BinarySearch</span> {
+<span class="line-num">2</span>    <span class="keyword">public int</span> <span class="function-name">search</span>(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) {
+<span class="line-num">3</span>        <span class="keyword">int</span> left = <span class="number">0</span>, right = nums.length - <span class="number">1</span>;
+<span class="line-num">4</span>        <span class="keyword">while</span> (left <= right) {
+<span class="line-num">5</span>            <span class="keyword">int</span> mid = left + (right - left) / <span class="number">2</span>;
+<span class="line-num">6</span>            <span class="keyword">if</span> (nums[mid] == target) {
+<span class="line-num">7</span>                <span class="keyword">return</span> mid; <span class="comment">// Target found!</span>
+<span class="line-num">8</span>            } <span class="keyword">else if</span> (nums[mid] < target) {
+<span class="line-num">9</span>                left = mid + <span class="number">1</span>;
+<span class="line-num">10</span>            } <span class="keyword">else</span> {
+<span class="line-num">11</span>                right = mid - <span class="number">1</span>;
+<span class="line-num">12</span>            }
+<span class="line-num">13</span>        }
+<span class="line-num">14</span>        <span class="keyword">return</span> -<span class="number">1</span>; <span class="comment">// Not found</span>
+<span class="line-num">15</span>    }
+<span class="line-num">16</span>}</code></pre>
+                        </div>
+                        <div class="ide-footer">
+                            <span class="status-indicator success"></span>
+                            <span class="status-msg">Compilation successful: Build finished in 150ms.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll Down">
+                    <span class="scroll-mouse">
+                        <span class="scroll-wheel"></span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <h2 class="section-title reveal"><span>About Me</span></h2>
+                <div class="about-grid">
+                    <div class="about-text-content reveal">
+                        <h3 class="about-subtitle">Building solutions, line by line.</h3>
+                        <p class="about-paragraph">
+                            I am a Software Engineering student specializing in **Java Development** and **Full Stack Technologies**. Currently pursuing my Bachelor of Technology in Information Technology, I focus on solving complex logic problems, designing optimized data structures, and organizing structured workflows.
+                        </p>
+                        <p class="about-paragraph">
+                            My technical journey is centered around deep understanding of Object-Oriented Programming (OOP) concepts, Database Management Systems (DBMS), and constructing robust server backends. I thrive in collaborative team environments and actively pursue continuous learning to keep pace with evolving industry benchmarks.
+                        </p>
+                        <div class="about-core-pillars">
+                            <div class="pillar-item">
+                                <div class="pillar-icon-wrapper"><i data-lucide="code-2"></i></div>
+                                <h4>Java & DSA</h4>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon-wrapper"><i data-lucide="layers"></i></div>
+                                <h4>Full Stack Dev</h4>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon-wrapper"><i data-lucide="database"></i></div>
+                                <h4>DBMS & SQL</h4>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon-wrapper"><i data-lucide="users-2"></i></div>
+                                <h4>Team Synergy</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual reveal">
+                        <div class="glass-card profile-metrics-card">
+                            <div class="card-glow-helper"></div>
+                            <h3 class="metrics-title">Personal Summary Highlights</h3>
+                            <div class="metrics-list">
+                                <div class="metric-row">
+                                    <span class="metric-label"><i data-lucide="brain"></i> Problem Solving</span>
+                                    <span class="metric-val">Advanced</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label"><i data-lucide="terminal"></i> DSA Core</span>
+                                    <span class="metric-val">Expert</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label"><i data-lucide="git-branch"></i> Git Workflow</span>
+                                    <span class="metric-val">Intermediate</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label"><i data-lucide="cpu"></i> Software Systems</span>
+                                    <span class="metric-val">Robust</span>
+                                </div>
+                            </div>
+                            <div class="profile-quote">
+                                <i data-lucide="quote" class="quote-icon"></i>
+                                <p>"Strive not only to write code that works, but code that is elegant, clean, and maintainable."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="section-container">
+                <h2 class="section-title reveal"><span>Technical Skills</span></h2>
+                <p class="section-subtitle reveal">A curated compilation of technologies, frameworks, and methodologies I work with.</p>
+                
+                <div class="skills-grid">
+                    <!-- Programming (Progress bars) -->
+                    <div class="glass-card skill-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <h3 class="skill-category-title"><i data-lucide="code"></i> Programming</h3>
+                        <div class="skills-progress-list">
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-progress="90%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span class="skill-name">SQL</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-progress="85%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span class="skill-name">HTML / CSS</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-progress="95%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" data-progress="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="glass-card skill-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <h3 class="skill-category-title"><i data-lucide="box"></i> Frameworks</h3>
+                        <div class="skills-tags-list">
+                            <div class="skill-tag-item">
+                                <i data-lucide="atom" class="tag-icon"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-tag-item">
+                                <i data-lucide="layout" class="tag-icon"></i>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="skill-tag-decor">
+                            <i data-lucide="sparkles" class="decor-icon"></i>
+                            <p>Designing custom, responsive frontends and fast layouts.</p>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="glass-card skill-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <h3 class="skill-category-title"><i data-lucide="database"></i> Databases</h3>
+                        <div class="skills-tags-list">
+                            <div class="skill-tag-item">
+                                <i data-lucide="server" class="tag-icon"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="skill-tag-item">
+                                <i data-lucide="hard-drive" class="tag-icon"></i>
+                                <span>SQLite</span>
+                            </div>
+                        </div>
+                        <div class="skill-tag-decor">
+                            <i data-lucide="database" class="decor-icon"></i>
+                            <p>Structured query designing, schema optimization, and ACID properties.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="glass-card skill-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <h3 class="skill-category-title"><i data-lucide="settings"></i> Developer Tools</h3>
+                        <div class="skills-tags-list">
+                            <div class="skill-tag-item"><i data-lucide="git-fork" class="tag-icon"></i><span>Git</span></div>
+                            <div class="skill-tag-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tag-icon"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg><span>GitHub</span></div>
+                            <div class="skill-tag-item"><i data-lucide="laptop" class="tag-icon"></i><span>VS Code</span></div>
+                            <div class="skill-tag-item"><i data-lucide="terminal" class="tag-icon"></i><span>Eclipse</span></div>
+                            <div class="skill-tag-item"><i data-lucide="mouse-pointer-click" class="tag-icon"></i><span>IntelliJ IDEA</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Concepts -->
+                    <div class="glass-card skill-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <h3 class="skill-category-title"><i data-lucide="lightbulb"></i> Core Concepts</h3>
+                        <div class="skills-tags-list">
+                            <div class="skill-tag-item"><i data-lucide="shapes" class="tag-icon"></i><span>OOP</span></div>
+                            <div class="skill-tag-item"><i data-lucide="link" class="tag-icon"></i><span>JDBC</span></div>
+                            <div class="skill-tag-item"><i data-lucide="table-properties" class="tag-icon"></i><span>DBMS</span></div>
+                            <div class="skill-tag-item"><i data-lucide="binary" class="tag-icon"></i><span>Data Structures</span></div>
+                            <div class="skill-tag-item"><i data-lucide="cpu" class="tag-icon"></i><span>Algorithms</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+                <h2 class="section-title reveal"><span>Featured Projects</span></h2>
+                <p class="section-subtitle reveal">Demonstrating practical application of coding knowledge across web apps, tools, and databases.</p>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="glass-card project-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="project-header">
+                            <span class="project-category">AI & Full-Stack</span>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg></a>
+                                <a href="#" class="project-link-icon" aria-label="Live Demo"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">AI Mental Wellness System (MindScope)</h3>
+                        <p class="project-desc">
+                            An AI-powered mental wellness platform supporting integrated virtual chatbot counseling, psychological assessments, customized performance reports, and personalized recovery recommendations.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> Secure Login</span>
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> AI Chatbot</span>
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> Dynamic Assessments</span>
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> Analytics Dashboard</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Flask</span>
+                            <span class="tech-pill">SQLite</span>
+                            <span class="tech-pill">OpenAI API</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="glass-card project-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="project-header">
+                            <span class="project-category">Java & Enterprise DB</span>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Supermarket Management System</h3>
+                        <p class="project-desc">
+                            A complete local retail orchestration application built to manage customer databases, automated billing, product logging, inventory checks, and interactive data insights.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> Billing Engine</span>
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> Product Logging</span>
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> Customer Records</span>
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> Inventory Tracker</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill">Java</span>
+                            <span class="tech-pill">JDBC</span>
+                            <span class="tech-pill">MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="glass-card project-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="project-header">
+                            <span class="project-category">Web Design & Architecture</span>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg></a>
+                                <a href="#" class="project-link-icon" aria-label="Live Demo"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-desc">
+                            A highly optimized, sleek visual portfolio built using components, structured grids, fluid styling, custom canvas particle render engines, and active page offsets.
+                        </p>
+                        <div class="project-features">
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> Glassmorphic Design</span>
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> 60 FPS Particle Canvas</span>
+                            <span class="feature-tag"><i data-lucide="check" class="check-icon"></i> SEO Structured</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Vite</span>
+                            <span class="tech-pill">CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section">
+            <div class="section-container">
+                <h2 class="section-title reveal"><span>Education Journey</span></h2>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="card-glow-helper"></div>
+                            <span class="timeline-duration"><i data-lucide="calendar"></i> 2023 - Present</span>
+                            <h3 class="timeline-degree">Bachelor of Technology (B.Tech)</h3>
+                            <h4 class="timeline-major">Information Technology</h4>
+                            <p class="timeline-institution"><i data-lucide="graduation-cap"></i> Nandha Engineering College</p>
+                            <div class="timeline-highlights">
+                                <ul>
+                                    <li>Focusing on Data Structures, Object-Oriented Analysis, and Database Operations.</li>
+                                    <li>Maintained consistent academic performance and actively led technical coding groups.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section">
+            <div class="section-container">
+                <h2 class="section-title reveal"><span>Certifications</span></h2>
+                <p class="section-subtitle reveal">Academic credentials and professional courses validating core skillsets.</p>
+                
+                <div class="certifications-grid">
+                    <!-- Cert 1 -->
+                    <div class="glass-card certification-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="cert-icon-wrapper"><i data-lucide="award"></i></div>
+                        <h3 class="cert-name">Java Programming Masterclass</h3>
+                        <p class="cert-issuer">Udemy / Oracle Core Align</p>
+                        <span class="cert-date">Completed: 2025</span>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="glass-card certification-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="cert-icon-wrapper"><i data-lucide="database-backup"></i></div>
+                        <h3 class="cert-name">Database Design and SQL Fundamentals</h3>
+                        <p class="cert-issuer">Coursera / Meta Career Build</p>
+                        <span class="cert-date">Completed: 2024</span>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="glass-card certification-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="cert-icon-wrapper"><i data-lucide="shield-check"></i></div>
+                        <h3 class="cert-name">Data Structures & Algorithms Training</h3>
+                        <p class="cert-issuer">GeeksforGeeks</p>
+                        <span class="cert-date">Completed: 2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements-section">
+            <div class="section-container">
+                <h2 class="section-title reveal"><span>Achievements</span></h2>
+                <p class="section-subtitle reveal">Key milestones and success checkpoints across coding competitive events and events.</p>
+                
+                <div class="achievements-grid">
+                    <!-- Achievement 1 -->
+                    <div class="glass-card achievement-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="achievement-icon-wrapper"><i data-lucide="trophy"></i></div>
+                        <h3 class="achievement-title">Hackathons</h3>
+                        <p class="achievement-desc">
+                            Secured top rank in college-level Hackathon by designing a real-time inventory synchronization backend utilizing JDBC.
+                        </p>
+                    </div>
+
+                    <!-- Achievement 2 -->
+                    <div class="glass-card achievement-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="achievement-icon-wrapper"><i data-lucide="code-2"></i></div>
+                        <h3 class="achievement-title">Coding Contests</h3>
+                        <p class="achievement-desc">
+                            Consistently placed in top deciles on regional competitive programming events with swift algorithm design.
+                        </p>
+                    </div>
+
+                    <!-- Achievement 3 -->
+                    <div class="glass-card achievement-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="achievement-icon-wrapper"><i data-lucide="calendar"></i></div>
+                        <h3 class="achievement-title">Workshops & Events</h3>
+                        <p class="achievement-desc">
+                            Spearheaded the structure and implementation of hands-on Java OOP bootcamps for student peers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coding Profiles Section -->
+        <section id="profiles" class="profiles-section">
+            <div class="section-container">
+                <h2 class="section-title reveal"><span>Coding Profiles</span></h2>
+                
+                <div class="profiles-grid">
+                    <!-- Leetcode -->
+                    <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="glass-card profile-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="profile-header">
+                            <div class="profile-icon leetcode-color"><i data-lucide="code-2"></i></div>
+                            <span class="profile-name">LeetCode</span>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-block">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-sub">Problems Solved</span>
+                            </div>
+                            <div class="stat-block">
+                                <span class="stat-number">Top 15%</span>
+                                <span class="stat-sub">Contest Rating</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Github -->
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="glass-card profile-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="profile-header">
+                            <div class="profile-icon github-color"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg></div>
+                            <span class="profile-name">GitHub</span>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-block">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-sub">Contributions</span>
+                            </div>
+                            <div class="stat-block">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-sub">Repositories</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="glass-card profile-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="profile-header">
+                            <div class="profile-icon linkedin-color"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></div>
+                            <span class="profile-name">LinkedIn</span>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-block">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-sub">Connections</span>
+                            </div>
+                            <div class="stat-block">
+                                <span class="stat-number">Active</span>
+                                <span class="stat-sub">Industry Engagement</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- HackerRank -->
+                    <a href="https://hackerrank.com" target="_blank" rel="noopener noreferrer" class="glass-card profile-card reveal">
+                        <div class="card-glow-helper"></div>
+                        <div class="profile-header">
+                            <div class="profile-icon hackerrank-color"><i data-lucide="terminal"></i></div>
+                            <span class="profile-name">HackerRank</span>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-block">
+                                <span class="stat-number">5 Stars</span>
+                                <span class="stat-sub">Java Gold Badge</span>
+                            </div>
+                            <div class="stat-block">
+                                <span class="stat-number">5 Stars</span>
+                                <span class="stat-sub">Problem Solving</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section">
+            <div class="section-container">
+                <h2 class="section-title reveal"><span>Professional Resume</span></h2>
+                <p class="section-subtitle reveal">Examine a stylized summary of qualifications and academic records.</p>
+                
+                <div class="resume-preview-wrapper reveal">
+                    <div class="glass-card resume-preview-card">
+                        <div class="card-glow-helper"></div>
+                        <div class="preview-header">
+                            <div class="preview-title-block">
+                                <h2>HARIPRASATH R N</h2>
+                                <p>B.Tech IT | Software Engineer & Java Developer</p>
+                            </div>
+                            <div class="preview-contact-block">
+                                <span><i data-lucide="mail"></i> hariprasath@example.com</span>
+                                <span><i data-lucide="phone"></i> +91 98765 43210</span>
+                                <span><i data-lucide="map-pin"></i> Erode, Tamil Nadu</span>
+                            </div>
+                        </div>
+                        
+                        <div class="preview-body">
+                            <div class="preview-section">
+                                <h3>Education</h3>
+                                <div class="preview-item">
+                                    <div class="preview-item-header">
+                                        <strong>Nandha Engineering College</strong>
+                                        <span>2023 - 2027</span>
+                                    </div>
+                                    <p>Bachelor of Technology in Information Technology</p>
+                                </div>
+                            </div>
+                            
+                            <div class="preview-section">
+                                <h3>Key Projects</h3>
+                                <div class="preview-item">
+                                    <div class="preview-item-header">
+                                        <strong>AI Mental Wellness System (MindScope)</strong>
+                                        <span>React, Flask, SQLite</span>
+                                    </div>
+                                    <p>Engineered dynamic mental health rating calculators and custom AI chatbot interfaces using state-aware forms.</p>
+                                </div>
+                                <div class="preview-item">
+                                    <div class="preview-item-header">
+                                        <strong>Supermarket Management System</strong>
+                                        <span>Java, JDBC, MySQL</span>
+                                    </div>
+                                    <p>Developed core transactional billing routines, client record arrays, and database connectivity links.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="preview-section">
+                                <h3>Skills Summary</h3>
+                                <p><strong>Programming:</strong> Java, SQL, HTML, CSS, JavaScript</p>
+                                <p><strong>Frameworks & Tools:</strong> React, Bootstrap, Git, GitHub, MySQL, SQLite</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-download-action">
+                        <a href="#" class="btn btn-primary btn-large" download="Hariprasath_RN_Resume.pdf">
+                            <i data-lucide="file-down"></i>
+                            <span>Download Resume PDF</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <h2 class="section-title reveal"><span>Get In Touch</span></h2>
+                <p class="section-subtitle reveal">Let's connect! Reach out for job opportunities, projects, or collaborations.</p>
+                
+                <div class="contact-grid">
+                    <!-- Info details -->
+                    <div class="contact-info-wrapper reveal">
+                        <div class="glass-card contact-info-card">
+                            <div class="card-glow-helper"></div>
+                            <h3>Contact Information</h3>
+                            <p class="contact-prompt">Have a question or want to build something together? Send a message!</p>
+                            
+                            <div class="info-list">
+                                <a href="mailto:hariprasath@example.com" class="info-item">
+                                    <div class="info-icon"><i data-lucide="mail"></i></div>
+                                    <div class="info-text">
+                                        <span class="info-label">Email Me</span>
+                                        <span class="info-val">hariprasath@example.com</span>
+                                    </div>
+                                </a>
+                                
+                                <a href="tel:+919876543210" class="info-item">
+                                    <div class="info-icon"><i data-lucide="phone"></i></div>
+                                    <div class="info-text">
+                                        <span class="info-label">Call Me</span>
+                                        <span class="info-val">+91 98765 43210</span>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="info-item">
+                                    <div class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></div>
+                                    <div class="info-text">
+                                        <span class="info-label">LinkedIn</span>
+                                        <span class="info-val">linkedin.com/in/hariprasath</span>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="info-item">
+                                    <div class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg></div>
+                                    <div class="info-text">
+                                        <span class="info-label">GitHub</span>
+                                        <span class="info-val">github.com/hariprasath</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form -->
+                    <div class="contact-form-wrapper reveal">
+                        <form id="contact-form" class="glass-card contact-form">
+                            <div class="card-glow-helper"></div>
+                            <h3>Send Message</h3>
+                            
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="user" class="input-icon"></i>
+                                    <input type="text" id="form-name" required placeholder="John Doe">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="at-sign" class="input-icon"></i>
+                                    <input type="email" id="form-email" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="message-square" class="input-icon message-icon"></i>
+                                    <textarea id="form-message" rows="5" required placeholder="Write your message here..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Submit Message</span>
+                                <i data-lucide="send" class="btn-icon"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="#home" class="logo">
+                    <span class="logo-accent">H</span><span class="logo-text">RN</span>
+                </a>
+                <p class="footer-tagline">Software Engineer & Java Developer</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="footer-socials">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <a href="mailto:hariprasath@example.com" aria-label="Email"><i data-lucide="mail"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hariprasath R N. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
