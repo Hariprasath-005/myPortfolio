@@ -1,0 +1,13 @@
+{
+  "name": "hariprasath-portfolio-backend",
+  "version": "1.0.0",
+  "description": "Express backend server for Hariprasath R N Portfolio Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}
