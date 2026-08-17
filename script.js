@@ -155,13 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
             opacity: 0,
             duration: 1.5,
             ease: "power4.out"
-        }, "-=1.2")
-        .from(".hero-outline-bg", {
-            opacity: 0,
-            x: -100,
-            duration: 1.8,
-            ease: "power3.out"
-        }, "-=1.5");
+        }, "-=1.2");
 
         // Reveal effect for Section titles
         const sections = document.querySelectorAll("section");
@@ -278,20 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Achievements card slide in
-        gsap.from(".achieve-luxury-card", {
-            y: 60,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.15,
-            ease: "power2.out",
-            clearProps: "all",
-            scrollTrigger: {
-                trigger: ".achieve-wrapper",
-                start: "top bottom",
-                once: true
-            }
-        });
+
     } else {
         // Fallback for counters if GSAP is unavailable
         startCounters();
